@@ -1,0 +1,14 @@
+version: '3'
+services:
+
+    latex:
+        image: jumpingrivers/latex
+        build: ./latex
+
+    builder:
+        image: jumpingrivers/builder
+        build: ./builder
+
+    gollum:
+        image: jumpingrivers/gollum
+        build: ./gollum
