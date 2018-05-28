@@ -27,5 +27,11 @@ alias gollum-d='docker run --rm -v `pwd`:/wiki -d -P -u `id -u`:`id -g` jumpingr
 gollum-d
 # f9a22bac...
 docker port f9a   # note: full container name not required
+
+## OR
+alias gollum-d='docker run --rm -v `pwd`:/wiki -d -P -u `id -u`:`id -g` jumpingrivers/gollum --live-preview --allow-uploads --mathjax|tee /dev/tty|xargs docker port'
 ```
 
+## Warning
+
+By default Docker binds containers to all host interfaces.  This means your Gollum will be accessible to anyone on your network if your firewall does not restrict this.  A restrictive firewall is always recommended, this is easy to achieve with, e.g., [UFW](https://wiki.debian.org/Uncomplicated%20Firewall%20%28ufw%29)
