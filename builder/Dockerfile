@@ -49,7 +49,7 @@ RUN install2.r --deps TRUE --error -l /rpackages/ \
                jrIntroduction jrModelling jrProgramming \
                jrGgplot2 jrAutomate jrEfficient \
                jrTidyverse jrAdvanced jrBig \
-               jrPredictive jrPackage \
+               jrPredictive jrPackage
 
 USER trainer
 
