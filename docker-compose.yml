@@ -12,3 +12,7 @@ services:
     gollum:
         image: jumpingrivers/gollum
         build: ./gollum
+
+    training:
+        image: jumpingrivers/training
+        build: ./training
